@@ -37,6 +37,7 @@
   <p>Hey it's sakae</p>
   <input id="Name" placeholder="Your name" placeholder="Your name">
   <input id="Email" placeholder="Your email" placeholder="Your email">
+  <input id="Age" placeholder="Your age">
   <input id="submit" type="submit">
   
   <script type="module">
@@ -64,6 +65,7 @@
 				
 const Name = document.querySelector("#Name") 
 const Email = document.querySelector("#Email")
+const Age = document.querySelector("#Age")
 document.querySelector('#submit').addEventListener('click', Submit)
 
 function Submit() {
@@ -72,10 +74,12 @@ function Submit() {
   set(ref(db, timestamp), {
 	  Name: Name.value,
       email: Email.value,
+      Age: Age.value,  
   });
 
   Name.value = ""
   Email.value = ""
+  Age.value = ""
 }
 
 
